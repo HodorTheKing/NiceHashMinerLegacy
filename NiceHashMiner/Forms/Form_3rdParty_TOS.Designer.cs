@@ -23,9 +23,11 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.button_Agree = new System.Windows.Forms.Button();
             this.button_Decline = new System.Windows.Forms.Button();
             this.label_Tos = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button_Agree
@@ -59,7 +61,13 @@
             this.label_Tos.Text = "label1";
             this.label_Tos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form_ClaymoreTOS
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Form_3rdParty_TOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +78,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_ClaymoreTOS";
+            this.Name = "Form_3rdParty_TOS";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Disclaimer on usage of 3rd party software";
@@ -84,5 +92,6 @@
         private System.Windows.Forms.Button button_Agree;
         private System.Windows.Forms.Button button_Decline;
         private System.Windows.Forms.Label label_Tos;
+        private System.Windows.Forms.Timer timer1;
     }
 }

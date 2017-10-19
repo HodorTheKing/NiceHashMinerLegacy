@@ -37,5 +37,12 @@ namespace NiceHashMiner
         {
             System.Diagnostics.Process.Start("https://github.com/nicehash/NiceHashMiner#troubleshooting");
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            buttonOK_Click(sender, e);
+            timer1.Stop();
+        }
     }
 }

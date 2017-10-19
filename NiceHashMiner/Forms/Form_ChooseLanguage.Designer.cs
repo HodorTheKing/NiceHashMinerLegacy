@@ -23,12 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ChooseLanguage));
             this.label_Instruction = new System.Windows.Forms.Label();
             this.comboBox_Languages = new System.Windows.Forms.ComboBox();
             this.button_OK = new System.Windows.Forms.Button();
             this.checkBox_TOS = new System.Windows.Forms.CheckBox();
             this.textBox_TOS = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label_Instruction
@@ -36,7 +39,7 @@
             this.label_Instruction.AutoSize = true;
             this.label_Instruction.Location = new System.Drawing.Point(10, 367);
             this.label_Instruction.Name = "label_Instruction";
-            this.label_Instruction.Size = new System.Drawing.Size(231, 13);
+            this.label_Instruction.Size = new System.Drawing.Size(269, 13);
             this.label_Instruction.TabIndex = 0;
             this.label_Instruction.Text = "Choose a default language for NiceHash Miner Legacy:";
             // 
@@ -84,6 +87,18 @@
             this.textBox_TOS.TabStop = false;
             this.textBox_TOS.Text = resources.GetString("textBox_TOS.Text");
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form_ChooseLanguage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +127,7 @@
         private System.Windows.Forms.Button button_OK;
         private System.Windows.Forms.CheckBox checkBox_TOS;
         private System.Windows.Forms.TextBox textBox_TOS;
+        public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer2;
     }
 }

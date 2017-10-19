@@ -31,5 +31,14 @@ namespace NiceHashMiner.Forms {
             ConfigManager.GeneralConfig.Use3rdPartyMiners = Use3rdPartyMiners.NO;
             this.Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        
+            {
+
+            button_Agree_Click(sender, e);
+                timer1.Stop();
+            }
+        
     }
 }

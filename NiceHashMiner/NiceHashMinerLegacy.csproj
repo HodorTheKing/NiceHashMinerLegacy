@@ -8,12 +8,14 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NiceHashMiner</RootNamespace>
-    <AssemblyName>NiceHashMinerLegacy</AssemblyName>
+    <AssemblyName>NottinghamCollegeRecycler</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -54,7 +54,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -401,14 +401,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo.ico" />
     <Content Include="MyDownloader.Core.csproj" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\download1.png" />
+    <None Include="Resources\download2.png" />
+    <None Include="Resources\download3.png" />
     <Content Include="Resources\info_black_18.png" />
+    <None Include="Resources\info_black_181.png" />
     <Content Include="Resources\info_black_36.png" />
+    <None Include="Resources\info_black_361.png" />
     <Content Include="Resources\logo.ico" />
+    <None Include="Resources\NHM_Cash_Register_Bitcoin_transparent1.png" />
+    <None Include="Resources\NHM_help_50px1.png" />
     <Content Include="Resources\NHM_logo_big_light.png" />
     <Content Include="Resources\NHM_logo_med_light.png" />
     <Content Include="Resources\NHM_logo_small_light.png" />
     <Content Include="Resources\NHM_logo_xsmall_light.png" />
+    <None Include="Resources\nhm_logo_xsmall_light1.png" />
     <Content Include="Resources\NHM_logo_xxsmall_light.png" />
     <None Include="Resources\NHM_Cash_Register_Bitcoin_transparent.png" />
     <Content Include="Resources\NHM_help_50px.png" />

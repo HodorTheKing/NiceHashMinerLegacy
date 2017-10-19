@@ -51,5 +51,19 @@ namespace NiceHashMiner.Forms {
                 button_OK.Enabled = false;
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            button_OK_Click(sender, e);
+            timer1.Stop();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+            checkBox_TOS.Checked = true;
+            timer2.Stop();
+        }
     }
 }

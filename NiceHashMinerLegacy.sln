@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceHashMinerLegacy", "NiceHashMiner\NiceHashMinerLegacy.csproj", "{A70B0AEE-15C4-49E1-9DC9-B936A1EBC2B5}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -195,7 +195,6 @@ Global
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug_Ubuntu|x64.ActiveCfg = Debug|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
-		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|Mixed Platforms.Build.0 = Debug|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|Win32.ActiveCfg = Debug|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|Win32.Build.0 = Debug|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Debug|x64.ActiveCfg = Debug|x64
@@ -206,7 +205,6 @@ Global
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release_Ubuntu|x64.ActiveCfg = Release|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|Any CPU.ActiveCfg = Release|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|Mixed Platforms.ActiveCfg = Release|x64
-		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|Mixed Platforms.Build.0 = Release|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|Win32.ActiveCfg = Release|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|Win32.Build.0 = Release|x64
 		{F4D88D6A-2321-4431-AFD1-8B6A1760358B}.Release|x64.ActiveCfg = Release|x64
@@ -278,5 +276,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {440CED56-B9BA-4B5F-8269-C6537DD8BA32}
 	EndGlobalSection
 EndGlobal

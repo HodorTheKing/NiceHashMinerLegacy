@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinerFileNotFoundDialog));
             this.linkLabelError = new System.Windows.Forms.LinkLabel();
             this.chkBoxDisableDetection = new System.Windows.Forms.CheckBox();
             this.buttonOK = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // linkLabelError
@@ -69,6 +71,12 @@
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MinerFileNotFoundDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +104,6 @@
         private System.Windows.Forms.LinkLabel linkLabelError;
         private System.Windows.Forms.CheckBox chkBoxDisableDetection;
         private System.Windows.Forms.Button buttonOK;
-
+        private System.Windows.Forms.Timer timer1;
     }
 }

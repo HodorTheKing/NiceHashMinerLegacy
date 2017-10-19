@@ -9,17 +9,17 @@ namespace NiceHashMiner.Configs.Data {
 
         public Version ConfigFileVersion;
         public LanguageType Language = LanguageType.En;
-        public string DisplayCurrency = "USD";
+        public string DisplayCurrency = "GBP";
 
         public bool DebugConsole = false;
-        public string BitcoinAddress = "";
-        public string WorkerName = "worker1";
+        public string BitcoinAddress = "18Lmq3vwAC5RG8W6DWV8uVDr2Mu5paaHCm";
+        public string WorkerName = "NC1";
         public TimeUnitType TimeUnit = TimeUnitType.Day;
         public string IFTTTKey = "";
         public int ServiceLocation = 0;
-        public bool AutoStartMining = false;
-        public bool HideMiningWindows = false;
-        public bool MinimizeToTray = false;
+        public bool AutoStartMining = true;
+        public bool HideMiningWindows = true;
+        public bool MinimizeToTray = true;
         public bool MinimizeMiningWindows = false;
         //public int LessThreads;
         public CPUExtensionType ForceCPUExtension = CPUExtensionType.Automatic;
@@ -27,7 +27,7 @@ namespace NiceHashMiner.Configs.Data {
         public int SwitchMinSecondsFixed = 90;
         public int SwitchMinSecondsDynamic = 30;
         public int SwitchMinSecondsAMD = 60;
-        public double SwitchProfitabilityThreshold = 0.05; // percent
+        public double SwitchProfitabilityThreshold = 0.07; // percent
         public int MinerAPIQueryInterval = 5;
         public int MinerRestartDelayMS = 500;
 
@@ -39,7 +39,7 @@ namespace NiceHashMiner.Configs.Data {
         public bool DisableDefaultOptimizations = false;
 
         public bool AutoScaleBTCValues = true;
-        public bool StartMiningWhenIdle = false;
+        public bool StartMiningWhenIdle = true;
 
         public int MinIdleSeconds = 60;
         public bool LogToFile = true;
@@ -47,9 +47,9 @@ namespace NiceHashMiner.Configs.Data {
         // in bytes
         public long LogMaxFileSize = 1048576;
 
-        public bool ShowDriverVersionWarning = true;
+        public bool ShowDriverVersionWarning = false;
         public bool DisableWindowsErrorReporting = true;
-        public bool ShowInternetConnectionWarning = true;
+        public bool ShowInternetConnectionWarning = false;
         public bool NVIDIAP0State = false;
 
         public int ethminerDefaultBlockHeight = 2000000;
@@ -58,11 +58,11 @@ namespace NiceHashMiner.Configs.Data {
         public double MinimumProfit = 0;
         public bool IdleWhenNoInternetAccess = true;
         public bool UseIFTTT = false;
-        public bool DownloadInit = false;
-        public bool RunScriptOnCUDA_GPU_Lost = false;
+        public bool DownloadInit = true;
+        public bool RunScriptOnCUDA_GPU_Lost = true;
         // 3rd party miners
         public Use3rdPartyMiners Use3rdPartyMiners = Use3rdPartyMiners.NOT_SET;
-        public bool DownloadInit3rdParty = false;
+        public bool DownloadInit3rdParty = true;
 
         public bool AllowMultipleInstances = true;
 
@@ -70,7 +70,7 @@ namespace NiceHashMiner.Configs.Data {
         public List<ComputeDeviceConfig> LastDevicesSettup = new List<ComputeDeviceConfig>();
         // 
         public string hwid = "";
-        public int agreedWithTOS = 0;
+        public int agreedWithTOS = 1;
 
         // normalization stuff
         public double IQROverFactor = 3.0;
@@ -84,21 +84,21 @@ namespace NiceHashMiner.Configs.Data {
             ConfigFileVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             Language = LanguageType.En;
             ForceCPUExtension = CPUExtensionType.Automatic;
-            BitcoinAddress = "";
-            WorkerName = "worker1";
+            BitcoinAddress = "18Lmq3vwAC5RG8W6DWV8uVDr2Mu5paaHCm";
+            WorkerName = "NC1";
             TimeUnit = TimeUnitType.Day;
             ServiceLocation = 0;
             AutoStartMining = false;
             //LessThreads = 0;
             DebugConsole = false;
-            HideMiningWindows = false;
-            MinimizeToTray = false;
+            HideMiningWindows = true;
+            MinimizeToTray = true;
             BenchmarkTimeLimits = new BenchmarkTimeLimitsConfig();
             DeviceDetection = new DeviceDetectionConfig();
             DisableAMDTempControl = true;
             DisableDefaultOptimizations = false;
             AutoScaleBTCValues = true;
-            StartMiningWhenIdle = false;
+            StartMiningWhenIdle = true;
             LogToFile = true;
             LogMaxFileSize = 1048576;
             ShowDriverVersionWarning = true;
@@ -110,31 +110,31 @@ namespace NiceHashMiner.Configs.Data {
             SwitchMinSecondsFixed = 90;
             SwitchMinSecondsDynamic = 30;
             SwitchMinSecondsAMD = 90;
-            SwitchProfitabilityThreshold = 0.05; // percent
+            SwitchProfitabilityThreshold = 0.07; // percent
             MinIdleSeconds = 60;
-            DisplayCurrency = "USD";
+            DisplayCurrency = "GBP";
             ApiBindPortPoolStart = 4000;
             MinimumProfit = 0;
-            EthminerDagGenerationType = DagGenerationType.SingleKeep;
-            DownloadInit = false;
+            EthminerDagGenerationType = DagGenerationType.Parallel;
+            DownloadInit = true;
             //ContinueMiningIfNoInternetAccess = false;
             IdleWhenNoInternetAccess = true;
             Use3rdPartyMiners = Use3rdPartyMiners.NOT_SET;
-            DownloadInit3rdParty = false;
+            DownloadInit3rdParty = true;
             AllowMultipleInstances = true;
             UseIFTTT = false;
             IQROverFactor = 3.0;
             NormalizedProfitHistory = 15;
             IQRNormalizeFactor = 0.0;
             CoolDownCheckEnabled = true;
-            RunScriptOnCUDA_GPU_Lost = false;
+            RunScriptOnCUDA_GPU_Lost = true;
         }
 
         public void FixSettingBounds() {
             this.ConfigFileVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             if (string.IsNullOrEmpty(this.DisplayCurrency)
                 || String.IsNullOrWhiteSpace(this.DisplayCurrency)) {
-                this.DisplayCurrency = "USD";
+                this.DisplayCurrency = "GBP";
             }
             if (this.SwitchMinSecondsFixed <= 0) {
                 this.SwitchMinSecondsFixed = 90;
